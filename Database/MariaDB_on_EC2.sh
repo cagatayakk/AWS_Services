@@ -25,7 +25,7 @@ SELECT Host, User, Password FROM user; # List the users defined in the server an
 CREATE DATABASE demodb;                # Create new database named 'demodb'.
 SHOW DATABASES;                        # Show newly created database.
 CREATE USER demouser IDENTIFIED BY 'demo1234';     # Create a user
-GRANT ALL ON clarusdb.* TO clarususer IDENTIFIED BY 'clarus1234' WITH GRANT OPTION;    # Grant permissions to the user
+GRANT ALL ON demodb.* TO demouser IDENTIFIED BY 'demo1234' WITH GRANT OPTION;    # Grant permissions to the user
 FLUSH PRIVILEGES;                      # Update privileges.
 EXIT;
 
