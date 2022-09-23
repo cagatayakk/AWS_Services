@@ -34,7 +34,7 @@ EXIT;
 
 mysql -u demouser -p                 # Login back as demouser using the password defined.
 SHOW DATABASES;
-USE clarusdb;                          # Select the database clarusdb.
+USE demodb;                          # Select the database clarusdb.
 
 # Create a table named offices.
 CREATE TABLE `offices` (
