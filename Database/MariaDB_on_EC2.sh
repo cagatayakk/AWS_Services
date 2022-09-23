@@ -32,7 +32,7 @@ EXIT;
 
 
 
-mysql -u clarususer -p                 # Login back as demouser using the password defined.
+mysql -u demouser -p                 # Login back as demouser using the password defined.
 SHOW DATABASES;
 USE clarusdb;                          # Select the database clarusdb.
 
