@@ -129,7 +129,7 @@ SELECT first_name, last_name, salary, city, state FROM employees INNER JOIN offi
 
 EXIT;        # Close the mysql terminal.
 
-# DO NOT FORGET TO TERMINATE THE INSTANCES YOU CREATED!!!!!!!!!!
+# DO NOT FORGET TO TERMINATE THE INSTANCES YOU CREATED!!!!!!!!
 
 
 
