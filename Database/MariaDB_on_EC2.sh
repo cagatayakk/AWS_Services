@@ -26,6 +26,8 @@ CREATE DATABASE demodb;                # Create new database named 'demodb'.
 SHOW DATABASES;                        # Show newly created database.
 CREATE USER demouser IDENTIFIED BY 'demo1234';     # Create a user
 GRANT ALL ON demodb.* TO demouser IDENTIFIED BY 'demo1234' WITH GRANT OPTION;    # Grant permissions to the user
+# WITH GRANT OPTION specifies that the security principal receiving the permission is given
+#the ability to grant the specified permission to other security accounts. 
 FLUSH PRIVILEGES;                      # Update privileges.
 EXIT;
 
