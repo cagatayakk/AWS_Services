@@ -14,7 +14,7 @@ sudo yum update -y                     # Update yum package management .
 sudo yum install mariadb-server -y     # Install MariaDB server.
 sudo systemctl start mariadb           # Start MariaDB service.
 sudo systemctl status mariadb          # Check status of MariaDB service.
-sudo systemctl enable mariadb          # # Enable MariaDB service, so that MariaDB service will be activated on restarts.
+sudo systemctl enable mariadb          # Enable MariaDB service, so that MariaDB service will be activated on restarts.
 
 
 sudo mysql_secure_installation         # Setup secure installation of MariaDB.
