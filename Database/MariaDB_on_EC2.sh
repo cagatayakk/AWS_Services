@@ -114,7 +114,7 @@ EXIT;
 
 sudo apt update && sudo apt upgrade -y      # Update instance.
 sudo apt-get install mariadb-client -y      # Install the mariadb-client.
-mysql -h ec2-3-94-163-77.compute-1.amazonaws.com -u demouser -p     # Write your PublicIDAdress(ec2-3-94-163-77.compute-1.amazonaws.com)
+mysql -h ec2-3-94-163-77.compute-1.amazonaws.com -u demouser -p     # Write your Public IPv4 DNS(ec2-3-94-163-77.compute-1.amazonaws.com)
 
 
 SHOW DATABASES;
