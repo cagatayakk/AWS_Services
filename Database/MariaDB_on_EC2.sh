@@ -118,7 +118,7 @@ mysql -h ec2-3-94-163-77.compute-1.amazonaws.com -u demouser -p     # Write your
 
 
 SHOW DATABASES;
-USE clarusdb;
+USE demodb;
 SHOW TABLES;
 SELECT * FROM employees;
 SELECT * FROM offices;
