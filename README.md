@@ -1,1 +1,1 @@
-# AWS_Services
+This repo is for my activities on AWS
