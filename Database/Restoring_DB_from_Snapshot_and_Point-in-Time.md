@@ -1,6 +1,6 @@
-# Hands-on DB-03 : Restoring RDS DB Instance from Manual Snapshot and Point in Time
+# Restoring RDS DB Instance from Manual Snapshot and Point in Time
 
-Purpose of the this hands-on training is to give understanding to take a manual snapshot from RDS DB instance, restore RDS DB instance from this snapshot, and also restore RDS DB instance from a point in time. We'll use the RDS crated in former session.(Hands-on DB-01)
+Purpose of the this hands-on training is to give understanding to take a manual snapshot from RDS DB instance, restore RDS DB instance from this snapshot, and also restore RDS DB instance from a point in time. We'll use the RDS crated in former session.
 
 ## Learning Outcomes
 
