@@ -14,7 +14,7 @@ sudo yum update -y                     # Update yum package management .
 sudo yum install mariadb-server -y     # Install MariaDB server.
 sudo systemctl start mariadb           # Start MariaDB service.
 sudo systemctl status mariadb          # Check status of MariaDB service.
-sudo systemctl enable mariadb          # # Enable MariaDB service, so that MariaDB service will be activated on restarts.
+sudo systemctl enable mariadb          # Enable MariaDB service, so that MariaDB service will be activated on restarts.
 
 
 sudo mysql_secure_installation         # Setup secure installation of MariaDB.
@@ -25,16 +25,18 @@ SELECT Host, User, Password FROM user; # List the users defined in the server an
 CREATE DATABASE demodb;                # Create new database named 'demodb'.
 SHOW DATABASES;                        # Show newly created database.
 CREATE USER demouser IDENTIFIED BY 'demo1234';     # Create a user
-GRANT ALL ON clarusdb.* TO clarususer IDENTIFIED BY 'clarus1234' WITH GRANT OPTION;    # Grant permissions to the user
+GRANT ALL ON demodb.* TO demouser IDENTIFIED BY 'demo1234' WITH GRANT OPTION;    # Grant permissions to the user
+# WITH GRANT OPTION specifies that the security principal receiving the permission is given
+#the ability to grant the specified permission to other security accounts. 
 FLUSH PRIVILEGES;                      # Update privileges.
 EXIT;
 
 
 
 
-mysql -u clarususer -p                 # Login back as demouser using the password defined.
+mysql -u demouser -p                 # Login back as demouser using the password defined.
 SHOW DATABASES;
-USE clarusdb;                          # Select the database clarusdb.
+USE demodb;                          # Select the database clarusdb.
 
 # Create a table named offices.
 CREATE TABLE `offices` (
@@ -114,11 +116,11 @@ EXIT;
 
 sudo apt update && sudo apt upgrade -y      # Update instance.
 sudo apt-get install mariadb-client -y      # Install the mariadb-client.
-mysql -h ec2-3-94-163-77.compute-1.amazonaws.com -u demouser -p     # Write your PublicIDAdress(ec2-3-94-163-77.compute-1.amazonaws.com)
+mysql -h ec2-3-94-163-77.compute-1.amazonaws.com -u demouser -p     # Write your Public IPv4 DNS(ec2-3-94-163-77.compute-1.amazonaws.com)
 
 
 SHOW DATABASES;
-USE clarusdb;
+USE demodb;
 SHOW TABLES;
 SELECT * FROM employees;
 SELECT * FROM offices;
@@ -127,7 +129,7 @@ SELECT first_name, last_name, salary, city, state FROM employees INNER JOIN offi
 
 EXIT;        # Close the mysql terminal.
 
-# DO NOT FORGET TO TERMINATE THE INSTANCES YOU CREATED!!!!!!!!!!
+# DO NOT FORGET TO TERMINATE THE INSTANCES YOU CREATED!!!!!!!!
 
 
 
