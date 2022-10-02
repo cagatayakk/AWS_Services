@@ -59,7 +59,7 @@ cat .aws/credentials
 aws configure --profile user1  #Farkli aws hesaplarina giriyorsak yeni profil olusturabiliriz. Mesela sirket ve sahsi hesabimiz icin
 
 aws s3 ls --profile mehmet  # mehmet adli kullanici icin islemi yapar (default profile'den)
-export AWS_PROFILE=user1   
+export AWS_PROFILE=mehmet
 export AWS_PROFILE=default
 
 aws configure list-profiles
@@ -87,7 +87,7 @@ aws s3 rm s3://guile-cli-bucket/in-class.yaml
 
 aws s3 rb s3://guile-cli-bucket
 
-aws s3 rb s3://guile-cli-bucket --force  # Bucket'in ici doluysa hic uyari vermeden siler
+aws s3 rb s3://guile-cli-bucket --force  # dolu Bucket'i direk  siler
 
 
 # EC2
