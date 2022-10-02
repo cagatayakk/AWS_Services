@@ -63,3 +63,11 @@ export AWS_PROFILE=default
 aws configure list-profiles
 
 aws sts get-caller-identity # Hangi userda , account'da oldugumu görürüm
+
+
+# IAM
+aws iam list-users
+
+aws iam create-user --user-name deneme
+
+aws iam delete-user --user-name deneme
