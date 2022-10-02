@@ -1,14 +1,20 @@
 # S3
 aws s3 ls
 
-aws s3 mb s3://guile-cli-bucket
+#make bucket
+aws s3 mb s3://cagatay-demo
 
-aws s3 cp in-class.yaml s3://guile-cli-bucket
+#copy
+aws s3 cp in-class.yaml s3://cagatay-demo
 
-aws s3 ls s3://guile-cli-bucket
+#list buckets
+aws s3 ls s3://cagatay-demo
 
-aws s3 rm s3://guile-cli-bucket/in-class.yaml
+#remove object
+aws s3 rm s3://cagatay-demo/in-class.yaml
 
-aws s3 rb s3://guile-cli-bucket
+#remove empty bucket
+aws s3 rb s3://cagatay-demo
 
-aws s3 rb s3://guile-cli-bucket --force  # dolu Bucket'i direk  sile
+#remove full bucket
+aws s3 rb s3://cagatay-demo --force  
