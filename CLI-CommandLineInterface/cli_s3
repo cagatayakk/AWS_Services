@@ -1,0 +1,20 @@
+# S3
+aws s3 ls
+
+#make bucket
+aws s3 mb s3://cagatay-demo
+
+#copy
+aws s3 cp in-class.yaml s3://cagatay-demo
+
+#list buckets
+aws s3 ls s3://cagatay-demo
+
+#remove object
+aws s3 rm s3://cagatay-demo/in-class.yaml
+
+#remove empty bucket
+aws s3 rb s3://cagatay-demo
+
+#remove full bucket
+aws s3 rb s3://cagatay-demo --force  

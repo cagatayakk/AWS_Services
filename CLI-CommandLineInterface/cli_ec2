@@ -1,0 +1,43 @@
+aws ec2 describe-instances
+
+aws ec2 run-instances \
+   --image-id ami-05fa00d4c63e32376 \
+   --count 1 \
+   --instance-type t2.micro \
+   --key-name First_Key # put your key name
+
+aws ec2 describe-instances \
+   --filters "Name = key-name, Values = First_Key" --output table # put your key name
+
+aws ec2 describe-instances --query "Reservations[].Instances[].PublicIpAddress[]"
+
+aws ec2 describe-instances \
+   --filters "Name = key-name, Values = First_Key" --query "Reservations[].Instances[].PublicIpAddress[]" # put your key name
+
+aws ec2 describe-instances \
+   --filters "Name = instance-type, Values = t2.micro" --query "Reservations[].Instances[].InstanceId[]"
+
+aws ec2 stop-instances --instance-ids INSTANCE_ID_HERE # put your instance id
+
+aws ec2 start-instances --instance-ids INSTANCE_ID_HERE # put your instance id
+
+aws ec2 terminate-instances --instance-ids INSTANCE_ID_HERE # put your instance id
+
+# Working with the latest Amazon Linux AMI
+
+aws ssm get-parameters --names /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2 --region us-east-1
+
+aws ssm get-parameters --names /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2 --query 'Parameters[0].[Value]' --output text
+
+aws ec2 run-instances \
+   --image-id $(aws ssm get-parameters --names /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2 --query \
+               'Parameters[0].[Value]' --output text) \
+   --count 1 \
+   --instance-type t2.micro \
+   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Linux}]' \
+   --security-group-ids sg-08838202d4c74facd \
+   --key-name First_Key \
+   
+   
+   
+   
