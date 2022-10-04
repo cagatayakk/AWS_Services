@@ -1,6 +1,8 @@
 # Creating Cloud architecture using AWS Cloudformation Service with other AWS Services and by scripting Template files
 ![Architecture_of_Template](Overview.png)
 
+
+## We will cretae : 
 - 1 VPC
 - 2 Public Subnet and 2 Private Subnet
 - 1 Internet Gateway and attach it to VPC
