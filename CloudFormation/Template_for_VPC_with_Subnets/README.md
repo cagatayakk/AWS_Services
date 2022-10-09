@@ -13,4 +13,5 @@
 - 2 NAT Gateway to provide internet connectivity to our private subnet
 - Route private traffic of each subnet in route table via respective NAT gateway
 - Associate private subnet to private route table
-- And we will have a fully function VPC with internet connection in private as well as public subnet
+- We will have a fully function VPC with internet connection in private as well as public subnet
+- 
